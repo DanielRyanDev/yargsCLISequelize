@@ -11,7 +11,7 @@ const app = async (args) => {
         }   else if (args.find) {
             await findMovie(movieObj);
         }   else if (args.update) {
-            await updateMovie(movieObj.director);
+            await updateMovie(movieObj);
         }   else if (args.delete) {
             await deleteMovie(movieObj);
         }

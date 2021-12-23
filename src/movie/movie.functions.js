@@ -14,7 +14,9 @@ exports.addMovie = async (movieObj) => {
 exports.findMovie = async (movieObj) => {
     try {
         await Movie.sync();
-        await Movie.findOne({ where: { director: movieObj.director }});
+        const findResult = await Movie.findAll({ where: { director: movieObj.director }});
+        // const findResult = await Movie.findAll();
+        console.log(findResult)
     } catch (error) {
         console.log(error)
     }
@@ -23,7 +25,8 @@ exports.findMovie = async (movieObj) => {
 exports.updateMovie = async (movieObj) => {
     try {
         await Movie.sync();
-        await Movie.update({ title: movieObj.title }, { where: { director: movieObj.director }});
+        const updateObj = await Movie.update({ director: movieObj.director }, { where: { title: movieObj.title }});
+        console.log(updateObj)
         console.log("Entry updated succesfully.")
     } catch (error) {
         console.log(error)
