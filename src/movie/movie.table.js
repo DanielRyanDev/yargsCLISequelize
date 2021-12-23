@@ -8,6 +8,7 @@ const Movie = sequelize.define("Movie", {
     },
     director: {
         type: DataTypes.STRING,
+        defaultValue: "Alan Smithee"
     },
 });
 
