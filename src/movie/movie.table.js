@@ -10,6 +10,9 @@ const Movie = sequelize.define("Movie", {
         type: DataTypes.STRING,
         defaultValue: "Alan Smithee"
     },
+    actors: {
+        type: DataTypes.STRING,
+    },
 });
 
 module.exports = Movie;
