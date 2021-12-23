@@ -1,0 +1,1 @@
+A simple demonstration of CRUD operations using a MySQL database and the Sequelize ORM. Update and Read need polishing but, at present, display the correct console.log but Create and Delete should work fine; hoping to change to Switch statements in due course.
